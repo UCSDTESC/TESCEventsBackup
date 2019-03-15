@@ -1,8 +1,6 @@
 #!/bin/sh
 set -e
 
-aws configure
-
 HOST=$MONGO_HOST
 DB=$MONGO_DB
 USER=$MONGO_USER
