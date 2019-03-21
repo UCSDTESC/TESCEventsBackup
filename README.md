@@ -2,9 +2,15 @@
 
 ### Docker container for backing up Mongo to S3
 
-## Usage
+## About
 
 This script was designed to run on an AWS ECS/EC2 instance with the proper permissions to access the specified S3 bucket. AWS permissions should be injected automatically by the ECS task runner or can be configured before running the script on the EC2 instance.
+
+## Usage
+
+To download the latest version in the `master` branch:
+
+```docker pull ucsdtesc/tesc-events-backup```
 
 To restore from the dump file use the following command:
 
