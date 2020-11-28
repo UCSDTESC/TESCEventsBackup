@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Check out the repo with our Dockerfile and stuff
-      - uses: UCSDTESC/TESCEventsBackup/
+      - uses: UCSDTESC/TESCEventsBackup@v1
