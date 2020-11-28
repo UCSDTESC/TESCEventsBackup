@@ -2,8 +2,8 @@ name: create-backup
 
 # Runs every day at 0:00 UTC time
 on:
-  schedule:
-    - cron: "0 0 * * *"
+  # schedule:
+    # - cron: "0 0 * * *"
   workflow_dispatch:
 
 jobs:
@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Check out the repo with our Dockerfile and stuff
-      - uses: UCSDTESC/TESCEventsBackup
+      - uses: UCSDTESC/TESCEventsBackup/
