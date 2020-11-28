@@ -1,4 +1,4 @@
-name: 'tesc.events Backup"
+name: 'tesc.events Backup'
 description: 'Create backup of tesc.events data'
 runs:
   using: 'docker'
