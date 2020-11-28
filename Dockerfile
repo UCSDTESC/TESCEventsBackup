@@ -17,6 +17,7 @@ RUN rm /var/cache/apk/*
 
 WORKDIR /usr
 
-ADD backup.sh backup.sh
+# ADD backup.sh backup.sh
+COPY backup.sh /backup.sh
 
 CMD [ "bash", "backup.sh" ]
