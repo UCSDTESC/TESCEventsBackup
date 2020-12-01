@@ -5,7 +5,7 @@ HOST=$MONGO_HOST
 DB=$MONGO_DB
 USER=$MONGO_USER
 PASSWORD=$MONGO_PASSWORD
-URI="mongodb+srv://$USER:$PASSWORD@$HOST/$DB"
+URI="mongodb://$USER:$PASSWORD@$HOST/$DB?ssl=true&replicaSet=atlas-12kcec-shard-0&authSource=admin&retryWrites=true&w=majority"
 
 S3_BUCKET=$S3_BUCKET
 
