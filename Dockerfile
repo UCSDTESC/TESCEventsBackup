@@ -1,3 +1,4 @@
+# Need at least version 3.9 to get correct version of mongodb-tools that accepts --uri option for mongodump
 FROM alpine:3.9
 
 RUN apk update
@@ -17,7 +18,6 @@ RUN rm /var/cache/apk/*
 
 WORKDIR /usr
 
-# ADD backup.sh backup.sh
 COPY backup.sh /backup.sh
 
 CMD [ "bash", "/backup.sh" ]
