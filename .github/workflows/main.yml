@@ -1,9 +1,9 @@
 name: create-backup
 
-# Runs every day at 0:00 UTC time
+# Runs every day at 0:00 UTC time and lets us manually run workflow
 on:
-  # schedule:
-    # - cron: "0 0 * * *"
+  schedule:
+    - cron: "0 0 * * *"
   workflow_dispatch:
 
 jobs:
