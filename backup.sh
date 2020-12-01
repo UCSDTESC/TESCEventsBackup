@@ -21,7 +21,3 @@ S3LATEST=$S3PATH"latest".dump.gz
 # Upload new dump to s3 as $Date.dump.gz AND latest.dump.gz
 aws s3 cp $DATE.dump.gz $S3BACKUP
 aws s3 cp $S3BACKUP $S3LATEST
-
-# Restore
-# echo -n "Restore: "
-# echo -n "aws s3 cp $S3LATEST - | mongorestore -h $HOST -d $DB -u [USER] -p [PASSWORD] --archive --gzip "
