@@ -14,8 +14,8 @@ S3BACKUP=$S3PATH`date -u +"%Y-%m-%dT%H%M%SZ"`.dump.gz
 S3LATEST=$S3PATH"latest".dump.gz
 /usr/bin/aws s3 mb $S3PATH
 
-/usr/bin/mongodump -h $HOST -d $DB -u $USER -p $PASSWORD --gzip --archive | aws s3 cp - $S3BACKUP
-# /usr/bin/mongodump --uri "$URI" --gzip --archive | aws s3 cp - $S3BACKUP
+# /usr/bin/mongodump -h $HOST -d $DB -u $USER -p $PASSWORD --gzip --archive | aws s3 cp - $S3BACKUP
+/usr/bin/mongodump --uri "$URI" --gzip --archive | aws s3 cp - $S3BACKUP
 aws s3 cp $S3BACKUP $S3LATEST
 
 # Restore
