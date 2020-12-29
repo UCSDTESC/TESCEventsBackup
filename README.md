@@ -15,9 +15,9 @@ The Github workflow will run every day at 0:00 UTC time. To manually run the wor
 
 To restore from the dump file, ensure that you have installed [MongoDB Database Tools](https://docs.mongodb.com/database-tools/installation/installation/). Download `latest.dump.gz` from AWS S3 and run the following command:
 
-```mongorestore --uri mongodb+srv://<username>:<password>@<host> --gzip --archive=latest.dump.gz```
+```mongorestore --uri mongodb+srv://<username>:<password>@<host> --gzip --archive=latest.dump.gz --nsInclude="*"```
 
-This command can be found in Atlas by clicking on your cluster and finding "Command Line Tools". Note that this command assumes you have the latest version of MongoDB Tools installed on your local machine.
+This command can be found in Atlas by clicking on your cluster and finding "Command Line Tools". Note that this command assumes you have the latest version of MongoDB Tools installed on your local machine. The command will restore the dump to the original database, so I believe this specific command will **completely overwrite our main database with the given arguments**. If you want to only restore a specific collection, you can change the ```nsInclude``` argument to something else (read the MongoDB Tools docs!)
 
 ## Configuration
 
